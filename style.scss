@@ -1,42 +1,78 @@
-.container {
-    color: rgb(6, 126, 6);
-    background-color: red($color: #000000);
-    background: fixed;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(6, 143, 6);
+  overflow: hidden;
+  margin: auto;
+}
 
+.container {
 }
 
 .header {
-    color: rgb(6, 126, 6);
-    background: rgb(223, 152, 0);
-    overflow: hidden;
-    width: 100%;
+  text-align: center;
+
+  color: rgb(8, 138, 8);
+  background-color: rgb(223, 152, 0);
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 .header-title {
-    text-align: center;
-    font-family: 'Yellowtail', cursive;
-
+  text-align: center;
+  font-family: "Yellowtail", cursive;
 }
 
 .header-subtitle {
-    text-align: center;
-    font-family: 'Yellowtail', cursive;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+  text-align: center;
+  font-family: "Yellowtail", cursive;
+}
+
+.header-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Baloo Chettan 2", cursive;
+    font-size: medium;
+    outline: none;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    font-size: large;
+    color: rgb(6, 126, 6);
+  }
 }
 
 h2:after,
 h2:before {
-    content: " ";
-    display: block;
-    border-bottom: 3px solid #000000;
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #000000;
 }
 
 h2 {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 200px max-content 200px;
-    grid-template-rows: 20px 0;
-    grid-gap: 20px;
-    justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 500px max-content 500px;
+  grid-template-rows: 20px 0;
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.top-banner {
+  display: block;
+
+  img {
+    width: 100vw;
+    overflow: hidden;
+  }
 }

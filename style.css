@@ -1,26 +1,54 @@
-.container {
-  color: #067e06;
-  background-color: 0;
-  background: fixed;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #068f06;
+  overflow: hidden;
+  margin: auto;
 }
 
 .header {
-  color: #067e06;
-  background: #df9800;
+  text-align: center;
+  color: #088a08;
+  background-color: #df9800;
   overflow: hidden;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .header-title {
   text-align: center;
-  font-family: 'Yellowtail', cursive;
+  font-family: "Yellowtail", cursive;
 }
 
 .header-subtitle {
   text-align: center;
-  font-family: 'Yellowtail', cursive;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
+  font-family: "Yellowtail", cursive;
+}
+
+.header-options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.header-options button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Baloo Chettan 2", cursive;
+  font-size: medium;
+  outline: none;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-options button:hover {
+  font-size: large;
+  color: #067e06;
 }
 
 h2:after,
@@ -34,14 +62,23 @@ h2 {
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px max-content 200px;
-      grid-template-columns: 200px -webkit-max-content 200px;
-      grid-template-columns: 200px max-content 200px;
+  -ms-grid-columns: 500px max-content 500px;
+      grid-template-columns: 500px -webkit-max-content 500px;
+      grid-template-columns: 500px max-content 500px;
   -ms-grid-rows: 20px 0;
       grid-template-rows: 20px 0;
-  grid-gap: 20px;
+  grid-gap: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.top-banner {
+  display: block;
+}
+
+.top-banner img {
+  width: 100vw;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
