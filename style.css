@@ -1,0 +1,47 @@
+.container {
+  color: #067e06;
+  background-color: 0;
+  background: fixed;
+}
+
+.header {
+  color: #067e06;
+  background: #df9800;
+  overflow: hidden;
+  width: 100%;
+}
+
+.header-title {
+  text-align: center;
+  font-family: 'Yellowtail', cursive;
+}
+
+.header-subtitle {
+  text-align: center;
+  font-family: 'Yellowtail', cursive;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+h2:after,
+h2:before {
+  content: " ";
+  display: block;
+  border-bottom: 3px solid #000000;
+}
+
+h2 {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px max-content 200px;
+      grid-template-columns: 200px -webkit-max-content 200px;
+      grid-template-columns: 200px max-content 200px;
+  -ms-grid-rows: 20px 0;
+      grid-template-rows: 20px 0;
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */
