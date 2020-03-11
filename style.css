@@ -1,13 +1,11 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #068f06;
-  overflow: hidden;
+  background-color: #088a08;
   margin: auto;
 }
 
 .header {
-  text-align: center;
   color: #088a08;
   background-color: #df9800;
   overflow: hidden;
@@ -15,17 +13,53 @@ body {
   padding-bottom: 10px;
 }
 
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header-title {
+  -webkit-animation: fadeInAnimation ease 5s;
+          animation: fadeInAnimation ease 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-align: center;
   font-family: "Yellowtail", cursive;
 }
 
 .header-subtitle {
+  -webkit-animation: fadeInAnimation ease 5s;
+          animation: fadeInAnimation ease 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-align: center;
   font-family: "Yellowtail", cursive;
 }
 
 .header-options {
+  -webkit-animation: fadeInAnimation ease 5s;
+          animation: fadeInAnimation ease 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -44,6 +78,7 @@ body {
   background-repeat: no-repeat;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  line-height: 20px;
 }
 
 .header-options button:hover {
@@ -80,5 +115,33 @@ h2 {
 .top-banner img {
   width: 100vw;
   overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+p {
+  -webkit-animation: fadeInAnimation ease 5s;
+          animation: fadeInAnimation ease 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.story-section .story-title {
+  text-align: center;
+  font-family: 'Courgette', cursive;
+}
+
+.story-section .story-content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: stretch;
+  grid-gap: 10px;
 }
 /*# sourceMappingURL=style.css.map */
