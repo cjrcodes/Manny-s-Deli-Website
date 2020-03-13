@@ -1,8 +1,15 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
+
   background-color: rgb(8, 138, 8);
-  margin: auto;
 }
 
 .main {}
@@ -13,6 +20,8 @@ body {
   overflow: hidden;
   width: 100%;
   padding-bottom: 10px;
+  position: sticky;
+  text-shadow: 1px 1px black;
 }
 
 @keyframes fadeInAnimation {
@@ -41,7 +50,7 @@ body {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 10%;
 
   button {
     color: white;
@@ -55,6 +64,8 @@ body {
     background-repeat: no-repeat;
     transition: 0.3s;
     line-height: 20px;
+    text-shadow: 1px 1px black;
+
   }
 
   button:hover {
@@ -85,6 +96,8 @@ h2 {
   img {
     width: 100vw;
     overflow: hidden;
+    box-shadow: 5px 5px 2px black;
+
   }
 }
 
@@ -97,13 +110,16 @@ h6,
 img,
 p,
 button {
+  /*Comment this out so live server changes won't be interrupted by opacity changes*/
+  /*
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
+  text-shadow: 1px 1px black;
+
 }
 
 .story-section {
-
 
   .story-title {
     text-align: center;
@@ -112,35 +128,69 @@ button {
 
   }
 
-  @media (max-width: 700px) {
-    .grid {
-      display: grid;
-
-      grid-template-areas:
-        'image'
-        'text';
-    }
-  }
 
   .grid {
 
-    display: grid;
+    /*display: grid;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 500px));
-    grid-template-areas: "image text";
+    grid-template-areas: "image text";    
+    grid-template-columns: auto-fit minmax(200px,400px);
+    margin-left: 12vw;
+    margin-right: 12vw;
+  
+    gap: 10px;*/
 
+    display: grid;
+    grid-template-rows: auto repeat(2, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: '....'
+                          'text'
+                          '....';
+                          grid-template-columns: [image-start] auto [image-end];
+                          grid-template-rows: [image-start] 12vh [image-end];
+    .grid-item img {
+      grid-area: image;
+  /*max-height: 100%;*/
+    align-self: stretch;
+        object-fit: cover;
+        width: 100%;
+    box-shadow: 5px 5px 2px black;
+    }
+    .grid-item p {
+    grid-area: text;
+    color: white;
+    font-size: x-large;  
+    margin-left: 5%;
+    font-family: 'Farsan', cursive;
+    }
+  }
 
-
+  @media (min-width: 640px)  {
+    .grid {
+      display: grid;
+      align-items: center;
+      grid-template-areas: "image text";    
+      grid-template-columns: auto-fit minmax(200px,400px);
+      grid-template-rows: none;
+      margin-left: 12vw;
+      margin-right: 12vw;
+    
+      gap: 10px;
+    }
 
     .grid-item img {
       grid-area: image;
+  /*max-height: 100%;*/
+   
+    box-shadow: 5px 5px 2px black;
     }
 
     .grid-item p {
-      grid-area: text;
-      color: white;
-
+    grid-area: text;
+    color: white;
+    font-size: x-large;  
+    font-family: 'Farsan', cursive;
     }
-  }
 }
+  }
+
