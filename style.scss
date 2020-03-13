@@ -5,11 +5,9 @@ body {
   margin: auto;
 }
 
-.container {}
+.main {}
 
 .header {
-
-
   color: rgb(8, 138, 8);
   background-color: rgb(223, 152, 0);
   overflow: hidden;
@@ -28,9 +26,6 @@ body {
 }
 
 .header-title {
-  animation: fadeInAnimation ease 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 
   text-align: center;
   font-family: "Yellowtail", cursive;
@@ -38,26 +33,18 @@ body {
 
 .header-subtitle {
 
-  animation: fadeInAnimation ease 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-
   text-align: center;
   font-family: "Yellowtail", cursive;
 }
 
 .header-options {
 
-  animation: fadeInAnimation ease 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 
   button {
-
+    color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -98,7 +85,6 @@ h2 {
   img {
     width: 100vw;
     overflow: hidden;
-
   }
 }
 
@@ -109,27 +95,52 @@ h4,
 h5,
 h6,
 img,
-p {
-
+p,
+button {
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 .story-section {
+
+
   .story-title {
     text-align: center;
-    font-family: 'Courgette',
-      cursive;
+    font-family: "Courgette", cursive;
+    color: white;
+
   }
 
-  .story-content {
+  @media (max-width: 700px) {
+    .grid {
+      display: grid;
+
+      grid-template-areas:
+        'image'
+        'text';
+    }
+  }
+
+  .grid {
+
     display: grid;
-    justify-items: stretch;
-    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 500px));
+    grid-template-areas: "image text";
 
-    img {}
+
+
+
+    .grid-item img {
+      grid-area: image;
+    }
+
+    .grid-item p {
+      grid-area: text;
+      color: white;
+
+    }
   }
-
-
 }

@@ -5,63 +5,69 @@
 <!--[if gt IE 8]><!-->
 <!--<![endif]-->
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Manny's Deli & Restaurant: Newark, NJ</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Manny's Deli & Restaurant: Newark, NJ</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="fonts.css" />
-</head>
-
-<body>
-  <script>
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    }
-  </script>
-  <!--[if lt IE 7]>
+  <body>
+    <script>
+      window.onbeforeunload = function() {
+        window.scrollTo(0, 0);
+      };
+    </script>
+    <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
 
-  <div class="container">
-    <div class="header">
-      <div class="header-title">
-        <h1>Manny's Deli & Restaurant</h1>
-      </div>
-      <div class="header-subtitle">
-        <h2>The Best Spanish Cuisine (Est. 1994)</h2>
-      </div>
-      <div class="header-options">
-        <button>The Story</button>
-        <button>Food Offerings</button>
-        <button>Contact</button>
-      </div>
-    </div>
-    <div class="top-banner">
-      <img src="images/MannysWideStoreFront.jpg" alt="images/mannysart.jpg" />
-    </div>
-
-    <section>
-      <div class="story-section">
-        <div class="story-title">
-          <h1>The Story</h1>
+    <div class="main">
+      <div class="header">
+        <div class="header-title">
+          <h1>Manny's Deli & Restaurant</h1>
         </div>
-        <div class="story-content">
-          <img src="images/mannysart.jpg" alt="">
-          <p>In 1994, Manny established Manny's Deli & Restaurant.
-            Throughout the years, he and his team have served tens of thousands of people from all over the world.
-          </p>
+        <div class="header-subtitle">
+          <h2>The Best Spanish Cuisine (Est. 1994)</h2>
+        </div>
+        <div class="header-options">
+          <button>The Story</button>
+          <button>Food Offerings</button>
+          <button>Contact</button>
         </div>
       </div>
-    </section>
-  </div>
-  <script src="" async defer></script>
-</body>
+      <div class="top-banner">
+        <img src="images/MannysWideStoreFront.jpg" alt="images/mannysart.jpg" />
+      </div>
 
+      <section class="story-section">
+        <div class="story-container">
+          <div class="story-title">
+            <h1>The Story</h1>
+          </div>
+          <div class="grid">
+            <div class="grid-item">
+              <img src="images/mannysart.jpg" alt="" />
+            </div>
+            <div class="grid-item">
+              <p>
+                In 1994, Manny established Manny's Deli & Restaurant. Throughout
+                the years, his establishment has served tens of thousands of
+                people from all over the world. As such, Manny's Deli &
+                Restaurant has been among the premiere locations for authentic
+                Spanish cuisine in Newark, New Jersey and the United States.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="" async defer></script>
+  </body>
 </html>

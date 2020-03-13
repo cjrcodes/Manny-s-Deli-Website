@@ -32,34 +32,16 @@ body {
 }
 
 .header-title {
-  -webkit-animation: fadeInAnimation ease 5s;
-          animation: fadeInAnimation ease 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   text-align: center;
   font-family: "Yellowtail", cursive;
 }
 
 .header-subtitle {
-  -webkit-animation: fadeInAnimation ease 5s;
-          animation: fadeInAnimation ease 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   text-align: center;
   font-family: "Yellowtail", cursive;
 }
 
 .header-options {
-  -webkit-animation: fadeInAnimation ease 5s;
-          animation: fadeInAnimation ease 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -68,6 +50,7 @@ body {
 }
 
 .header-options button {
+  color: white;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -124,7 +107,8 @@ h4,
 h5,
 h6,
 img,
-p {
+p,
+button {
   -webkit-animation: fadeInAnimation ease 5s;
           animation: fadeInAnimation ease 5s;
   -webkit-animation-iteration-count: 1;
@@ -135,13 +119,40 @@ p {
 
 .story-section .story-title {
   text-align: center;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
+  color: white;
 }
 
-.story-section .story-content {
+@media (max-width: 700px) {
+  .story-section .grid {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'image' 'text';
+  }
+}
+
+.story-section .grid {
   display: -ms-grid;
   display: grid;
-  justify-items: stretch;
-  grid-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-columns: (minmax(240px, 500px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 500px));
+      grid-template-areas: "image text";
+}
+
+.story-section .grid .grid-item img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+}
+
+.story-section .grid .grid-item p {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
